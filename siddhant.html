@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+  body {
+    background-color:  lightpink;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #container {
+    text-align: center;
+  }
+  button {
+    color: darkred;
+    background-color: bisque;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  button.no {
+    color: darkred;
+    font-size: 16px;
+  }
+  h1{
+    color: darkred;
+    font-family: 'Times New Roman', Times, serif;
+  }
+</style>
+</head>
+<body>
+
+<div id="container">
+  <h1>Will you be my Valentine?</h1>
+  <button id="yesButton">Yes</button>
+  <button id="noButton">No</button>
+</div>
+
+<script>
+  const yesButton = document.getElementById('yesButton');
+  const noButton = document.getElementById('noButton');
+
+  let noButtonClicks = 0;
+
+  yesButton.addEventListener('click', function() {
+    window.location.href = "otherpage.html"; // Redirect to another page
+  });
+
+  noButton.addEventListener('click', function() {
+    if (noButtonClicks === 0) {
+      noButton.innerHTML = "Are you sure?";
+      yesButton.style.fontSize = "32px";
+      noButtonClicks++;
+    } else if (noButtonClicks === 1) {
+      noButton.innerHTML = "Really?";
+      yesButton.style.fontSize = "48px";
+      noButtonClicks++;
+    } else if (noButtonClicks === 2) {
+      noButton.innerHTML = "You're killing me!!!";
+      yesButton.style.fontSize = "64px";
+      noButtonClicks++;
+    } 
+    else if (noButtonClicks === 3) {
+      noButton.innerHTML = "Don't do this pleaseeeeeeeeeeeeeeee!!!";
+      yesButton.style.fontSize = "128px";
+      noButtonClicks++;
+    }
+    else if (noButtonClicks === 4) {
+      noButton.innerHTML = "I'm gonna cry fr!!!";
+      yesButton.style.fontSize = "256px";
+      noButtonClicks++;
+    }
+    else if (noButtonClicks === 5) {
+      noButton.innerHTML = ":(";
+      yesButton.style.fontSize = "512px";
+      noButtonClicks++;
+    }
+    else if (noButtonClicks === 4) {
+      noButton.innerHTML = "hahahah u thought u had a choice?";
+      yesButton.style.fontSize = "1024x";
+      noButtonClicks++;
+    }
+    else {
+      alert('Oh no! Maybe next time!');
+    }
+  });
+</script>
+
+</body>
+</html>
